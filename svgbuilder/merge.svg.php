@@ -133,14 +133,4 @@ $sign->getElementById('pole')->setHeight( $sign->getHeight() );                 
 $sign->setDefaultViewBox();
 $sign->output();
 
-function str_starts_with($haystack, $needle)
-{
-    return strpos($haystack, $needle) === 0;
-}
-function str_ends_with($haystack, $needle)
-{
-    return strrpos($haystack, $needle) + strlen($needle) ===
-        strlen($haystack);
-}
-
 ?>

@@ -66,14 +66,4 @@ $signstring = str_replace(':', '_', $signstring);  // replace : by _ to match fi
 
 $sign->output();
 
-function str_starts_with($haystack, $needle)
-{
-    return strpos($haystack, $needle) === 0;
-}
-function str_ends_with($haystack, $needle)
-{
-    return strrpos($haystack, $needle) + strlen($needle) ===
-        strlen($haystack);
-}
-
 ?>
