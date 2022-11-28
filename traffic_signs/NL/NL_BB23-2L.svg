@@ -1,0 +1,10 @@
+<?xml version="1.0" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" id="Netherlands_traffic_sign_BB23_2L" width="600" height="600" viewBox="0 0 600 600" version="1.1">
+<g>
+	<rect id="surface" x="150" width="300" height="600" fill="#f7fbf5"></rect>
+	<path id="red_1" fill="red" d="M 150,75 450,375 450,425 150,125 z"/>
+	<path id="red_2" fill="red" d="M 150,175 450,475 450,525 150,225 z"/>
+	<rect id="border" x="151" y="1" rx="10" ry="10" width="298" height="598" stroke="gray" stroke-width="3px" fill="none"/>
+</g>
+</svg>
+

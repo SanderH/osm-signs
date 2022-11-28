@@ -1,0 +1,22 @@
+<?xml version="1.0" standalone="no"?>
+<svg id="Nederlands_verkeersbord_BB4" width="300" height="450" viewBox="0 0 300 450" xmlns="http://www.w3.org/2000/svg" version="1.1">
+<g>
+    <rect
+       style="fill:#f7fbf5;fill-rule:evenodd;stroke:#000000;stroke-width:1.04490376000000000px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1"
+       id="groen_vlak"
+       width="300"
+       height="450"
+       x="0"
+       y="0" />
+
+
+<path id="zwart_vlak_1" fill="black" d="M 0,100 0,0 100,0" />
+
+<path id="zwart_vlak_2" fill="black" d="M 0,200 200,0 300,0 300,20 0,320" />
+
+<path id="zwart_vlak_1" fill="black" d="M 0,450 0,430 300,130 300,250 100,450" />
+
+<path id="zwart_vlak_2" fill="black" d="M 200,450 300,350 300,450" />
+
+</g>
+</svg>

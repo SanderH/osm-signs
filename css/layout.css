@@ -1,0 +1,26 @@
+body {
+	font-family: 'Lucida Grande',Verdana,Geneva,Lucida,Arial,Helvetica,sans-serif';
+	font-size: 16px;
+}
+
+.map {
+	height: 500px;
+	width: 100%;
+/*	background: url(../images/map-background.jpg) repeat;*/
+	margin-bottom: 10px;
+	border: 1px solid black;
+}
+
+.chart {
+	height: 600px;
+	width: 100%;"
+}
+
+.table-nonfluid {
+   width: auto !important;
+}
+
+.nav-pills .nav-link.active, .list-group-item.active {
+  background-color: #7092FF !important;
+  border-color: #7092FF !important;
+}

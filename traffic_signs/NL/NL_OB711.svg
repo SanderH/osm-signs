@@ -1,0 +1,8 @@
+<?xml version="1.0" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" id="Netherlands_traffic_sign_OB711" width="300" height="300" viewBox="0 0 300 300" version="1.1">
+ <g>	<rect id="surface" width="300" height="300" fill="#f7fbf5"> </rect>
+	<path id="main" fill="transparent" stroke="black" stroke-width="50" d="M 20,130 L90,130 A90,130 45 0,1 170,210 L 170,280"/>
+	<path id="sideT" fill="transparent" stroke="black" stroke-width="20" d="M 170,20 L 170,110"/>
+	<path id="sideR" fill="transparent" stroke="black" stroke-width="20" d="M 190,130 L 290,130"/>
+ </g>
+</svg>

@@ -1,0 +1,24 @@
+<?xml version="1.0" standalone="no"?>
+<svg id="Nederlands_verkeersbord_C2-OB705-F" width="300" height="450" viewBox="0 0 300 450" xmlns="http://www.w3.org/2000/svg" version="1.1">
+<g>
+    <rect
+       style="fill:#f0ca00;fill-rule:evenodd;stroke:#000000;stroke-width:1.04490376000000000px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1"
+       id="rect2992"
+       width="300"
+       height="450"
+       x="0"
+       y="0" />
+
+<circle id="rode_cirkel" cx="150" cy="150" r="150" fill="#c1121c" />
+
+<path id="witte_streep" fill="#f7fbf5"
+     d="M 280.92589,177.40964 C 282.70061,168.69912 283.88103,159.19082 283.88103,149.93487 C 283.88103,140.2312 282.86342,130.78802 280.89333,121.69489 L 18.854305,121.62976 C 16.916773,130.75545 15.866598,140.2312 15.866598,149.93487 C 15.866598,159.34549 16.851646,168.56887 18.699628,177.40964 L 280.92589,177.40964" />
+
+		<path id="zwarte_bies" style="fill:#f7fbf5;stroke:#808080;stroke-width:3.00000" d="M 280.00000,420.00000 C 290.00000,420.00000 295.00000,415.00000 295.00000,405.00000 L 295.00000,350.00000 C 295.00000,340.00000 290.00000,330.00000 280.00000,330.00000 L 25.00000,330.00000 C 15.00000,330.00000 5.00000,340.00000 5.00000,350.00000 L 5.00000,405.00000 C 5.00000,415.00000 15.00000,420.00000 25.00000,420.00000 L 280.00000,420.00000 z"> </path>
+
+		<text x="150" y="390" font-family="sans-serif" font-size="64" font-weight="bold" fill="black" text-anchor="middle">
+			<tspan>ga terug</tspan>
+		</text>
+
+</g>
+</svg>

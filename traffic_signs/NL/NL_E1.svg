@@ -1,0 +1,7 @@
+<?xml version="1.0" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" id="Nederlands_verkeersbord_E1" width="300" height="300" viewBox="0 0 300 300" version="1.1">
+<g>
+	<circle id="blauwe_cirkel_met_rode_rand" cx="150" cy="150" r="131" fill="#0e518d" stroke="#c1121c" stroke-width="39"/>
+	<path id="rode_streep" fill="#c1121c" d="M 251,236 L 65,50 L 52,63 L 238,249 L 251,236"/>
+</g>
+</svg>

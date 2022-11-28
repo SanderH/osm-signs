@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" id="Nederlands_verkeersbord_BB2" width="300" height="150" viewBox="0 0 300 150"> 
+	<g> 
+		<rect id="blauw_vlak" width="300" height="150" fill="#0e518d"> </rect>
+
+		<path id="witte_bies" style="fill:none;stroke:#f7fbf5;stroke-width:3" d="M 280,145 C 290,145 295,140 295,130 L 295,25 C 295,15 290,5 280,5 L 25,5 C 15,5 5,15 5,25 L 5,130 C 5,140 15,145 25,145 L 280,145 z"> </path>
+
+		<rect id="blauw_vlak_2" width="100" height="150" x="200" fill="#0e518d"> </rect>
+
+
+		<path id="witte_pijl" style="fill:#f7fbf5;stroke:#f7fbf5;stroke-width:2" d="M 200,5 295,75 200,145 250,75 z"> </path>
+
+		<text x="100" y="110" font-family="sans-serif" font-size="96" fill="#f7fbf5" text-anchor="middle">
+			<tspan>UIT</tspan>
+		</text>
+	</g>
+</svg>

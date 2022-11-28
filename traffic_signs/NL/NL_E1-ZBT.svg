@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" id="Nederlands_verkeersbord_E1-ZBT" width="240" height="300" viewBox="0 0 240 300" version="1.1">
+	<g>
+		<path id="wit_vlak" style="fill:#f7fbf5;stroke:none" d="m 0,300 240,0 0,-300 -240,0 0,300 z m 240,0 0,0 z"/>
+		<path id="zwarte_rand" style="fill:none;stroke:#2a2d2f;stroke-width:0" d="M 0,300 L 240,300 L 240,0 L 0,0 L 0,300 z M 240,300 L 240,300 z"/>
+		<path id="zwarte_bies" style="fill:none;stroke:#2a2d2f;stroke-width:5" d="M 211,292 C 221,292 230,285 230,276 L 230,24 C 230,15 221,8 211,8 L 29,8 C 19,8 10,15 10,24 L 10,276 C 10,285 19,292 29,292 L 211,292 z"/>
+		<text id="tekst" x="120" y="45" font-family="Verdana" font-size="30" font-weight="bold" fill="black" text-anchor="middle">ZONE</text>
+		<text id="tekst" x="120" y="270" font-family="Verdana" font-size="30" font-weight="bold" fill="black" text-anchor="middle">H:m-H:m h</text>
+		<g id="sign" transform="scale(0.6) translate(50,100)">
+			<circle id="blauwe_cirkel_met_rode_rand" cx="150" cy="150" r="131" fill="#0e518d" stroke="#c1121c" stroke-width="39"/>
+			<path id="rode_streep" fill="#c1121c" d="M 251,236 L 65,50 L 52,63 L 238,249 L 251,236"/>
+		</g>
+	</g>
+</svg>

@@ -1,0 +1,182 @@
+/*
+Kleur RAL-code
+Wit 9002 of 9016
+Rood 3020
+Grijs 7042 of 7043
+Blauw 5017
+Zwart 9005 of 9017
+*/
+meta {
+    title: "NL+DE traffic signs";
+    description: "Visualization of Dutch (and German) roadsigns.";
+    author: "Sander H";
+    version: "0.94_2022-10-17";
+    license: "CC-BY-SA";
+    icon: "https://signs.tools4osm.nl/images/icon.svg";
+    min-josm-version: "8260";
+}
+
+meta[lang=nl]
+{
+    title: "NL+DE verkeersborden";
+    description: "Visualisatie voor Nederlandse (en Duitse) verkeersborden";
+}
+
+/* Create mappaint user settings. */
+setting::rotate_based_on_direction {
+  type: boolean;
+  label: tr("Use the direction tag to rotate traffic signs on nodes");
+  default: true;
+}
+setting::node_icon_size {
+  type: integer;
+  label: tr("Specify the size of the icon on nodes");
+  default: 16;
+}
+setting::way_show_icons {
+  type: boolean;
+  label: tr("Show icons on ways");
+  default: true;
+}
+setting::way_icon_size {
+  type: integer;
+  label: tr("Specify the size of the icons on ways");
+  default: 16;
+}
+setting::way_icon_spacing {
+  type: integer;
+  label: tr("Specify the repeat-interval of icons on ways");
+  default: 250;
+}
+
+/* display individual traffic_sign */
+node[traffic_sign^="NL"],
+node[traffic_sign^="DE"]
+{
+	icon-image: eval(concat("https://signs.tools4osm.nl/svgbuilder/show.svg.php?signs=", tag(traffic_sign), ".svg"));
+	icon-width: 20;
+}
+
+/* nodes with multiple signs will be sent to the svg builder where they will be combined */
+node[traffic_sign=~/^NL.*,.*/], node[traffic_sign=~/^NL.*;.*/],
+node[traffic_sign=~/^DE.*,.*/], node[traffic_sign=~/^DE.*;.*/]
+{
+	icon-image: eval(concat("https://signs.tools4osm.nl/svgbuilder/merge.svg.php?signs=", tag(traffic_sign), ".svg"));
+	icon-width: 20;
+}
+
+/* draw traffic_sign on way */
+way[traffic_sign^="NL"][setting("way_show_icons")],
+way[traffic_sign^="DE"][setting("way_show_icons")]
+{
+	repeat-image: eval(concat("https://signs.tools4osm.nl/svgbuilder/show.svg.php?signs=", tag(traffic_sign), ".svg"));
+	repeat-image-width: 16;
+	repeat-image-spacing: 250;
+}
+
+/* ways with multiple signs will be sent to the svg builder where they will be combined */
+way[traffic_sign=~/^NL.*,.*/][setting("way_show_icons")], way[traffic_sign=~/^NL.*;.*/][setting("way_show_icons")],
+way[traffic_sign=~/^DE.*,.*/][setting("way_show_icons")], way[traffic_sign=~/^DE.*;.*/][setting("way_show_icons")]
+{
+	repeat-image: eval(concat("https://signs.tools4osm.nl/svgbuilder/merge.svg.php?signs=", tag(traffic_sign), ".svg"));
+	repeat-image-width: 16;
+	repeat-image-spacing: 250;
+}
+
+/* exception for traffic_sign G13/14 which are a bit wider */
+node[traffic_sign=~/^NL:G13.*/][setting("way_show_icons")],
+node[traffic_sign=~/^NL:G14.*/][setting("way_show_icons")]
+{
+	icon-width: 40;
+}
+/* also for ways, but direction of way may cause sign to be drawn upside down */
+way[traffic_sign=~/^NL:G13.*/][setting("way_show_icons")],
+way[traffic_sign=~/^NL:G14.*/][setting("way_show_icons")]
+{
+	repeat-image-width: 32;
+}
+
+/* from HenkL: if direction is present, rotate icon */
+node[traffic_sign^="NL"][direction][setting("rotate_based_on_direction")],
+node[traffic_sign^="DE"][direction][setting("rotate_based_on_direction")]
+{
+    /* icon-rotation: eval(degree_to_radians(tag(direction)));*/
+	
+	/* from phicoh, zie ook https://forum.openstreetmap.org/viewtopic.php?pid=699387#p699387 voor discussie over juiste orientatie van de borden 180 graden extra draai */
+    icon-rotation: eval(degree_to_radians(180 +
+	(tag(direction) = "N"   ? 0 : 
+	 tag(direction) = "NNE" ? 22 : 
+	 tag(direction) = "NE"  ? 45 : 
+	 tag(direction) = "ENE" ? 67 : 
+	 tag(direction) = "E"   ? 90 :
+	 tag(direction) = "ESE" ? 112 :
+	 tag(direction) = "SE"  ? 135 :
+	 tag(direction) = "SSE" ? 157 :
+	 tag(direction) = "S"   ? 180 :
+	 tag(direction) = "SSW" ? 202 :
+	 tag(direction) = "SW"  ? 225 :
+	 tag(direction) = "WSW" ? 247 :
+	 tag(direction) = "W"   ? 270 :
+	 tag(direction) = "WNW" ? 292 :
+	 tag(direction) = "NW"  ? 315 :
+	 tag(direction) = "NNW" ? 337 :
+	 tag(direction) = "north" ? 0 : 
+	 tag(direction) = "east"  ? 90 :
+	 tag(direction) = "south" ? 180 :
+	 tag(direction) = "west"  ? 270 :
+	 tag(direction)
+	)));
+}
+
+node[traffic_sign^="NL"]["traffic_sign:direction"][setting("rotate_based_on_direction")],
+node[traffic_sign^="DE"]["traffic_sign:direction"][setting("rotate_based_on_direction")]
+{
+/*    icon-rotation: eval(degree_to_radians(tag("traffic_sign:direction")));*/
+
+	/* from phicoh*/
+    icon-rotation: eval(degree_to_radians(180 +
+	(tag("traffic_sign:direction") = "N"   ? 0 : 
+	 tag("traffic_sign:direction") = "NNE" ? 22 : 
+	 tag("traffic_sign:direction") = "NE"  ? 45 : 
+	 tag("traffic_sign:direction") = "ENE" ? 67 : 
+	 tag("traffic_sign:direction") = "E"   ? 90 :
+	 tag("traffic_sign:direction") = "ESE" ? 112 :
+	 tag("traffic_sign:direction") = "SE"  ? 135 :
+	 tag("traffic_sign:direction") = "SSE" ? 157 :
+	 tag("traffic_sign:direction") = "S"   ? 180 :
+	 tag("traffic_sign:direction") = "SSW" ? 202 :
+	 tag("traffic_sign:direction") = "SW"  ? 225 :
+	 tag("traffic_sign:direction") = "WSW" ? 247 :
+	 tag("traffic_sign:direction") = "W"   ? 270 :
+	 tag("traffic_sign:direction") = "WNW" ? 292 :
+	 tag("traffic_sign:direction") = "NW"  ? 315 :
+	 tag("traffic_sign:direction") = "NNW" ? 337 :
+	 tag("traffic_sign:direction") = "north" ? 0 : 
+	 tag("traffic_sign:direction") = "east"  ? 90 :
+	 tag("traffic_sign:direction") = "south" ? 180 :
+	 tag("traffic_sign:direction") = "west"  ? 270 :
+	 tag("traffic_sign:direction")
+	)));
+}
+/*
+node[traffic_sign =~ /.*\(.*\)/]
+{
+/*    _match: regexp_match("((?<country>[a-zA-Z]+)(?:[:])(?<category>[a-zA-Z]+)(?:[0]?)(?<number>[0-9a-zA-Z-]+)(?:\()(?<suffix>.*?)(?:\)))", tag("traffic_sign"));* /
+/*    _match: regexp_match("((?[a-zA-Z]+)(?:[:])(?[a-zA-Z]+)(?:[0]?)(?[0-9a-zA-Z-]+)(?:\()(?.*?)(?:\)))", tag("traffic_sign"));* /
+
+    _match: regexp_match("((?[a-zA-Z]+)(?:[:])(?[a-zA-Z]+)(?:[0]?)(?[0-9a-zA-Z-]+)(?:\()(?.*?)(?:\)))", tag("traffic_sign"));
+
+	/*text: eval(concat("http://duinoord.home.xs4all.nl/OSM/JOSM/NL_traffic_signs/traffic_signs/NL/", get(prop("_match"),1), get(prop("_match"),2), get(prop("_match"),3), get(prop("_match"),4), "<" ));* /
+}
+above didn't work, so using the below workaround from HenkL
+*/
+node[traffic_sign*="(U"]
+{
+    _temp1: split("(U", tag(traffic_sign));
+    _temp2: get(prop(_temp1), 0);
+    _temp3: replace(prop(_temp2), ":", "_");
+    _temp4: concat("https://signs.tools4osm.nl/traffic_signs/NL/", prop(_temp3), ".svg");
+    icon-image: eval(prop(_temp4));
+}
+/* TODO */
+/* render nodes with multiple traffic signs works now, but mainly German signs have different svg causing most to be rendered wrong */

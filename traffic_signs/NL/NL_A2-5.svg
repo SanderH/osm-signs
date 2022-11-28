@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg id="Nederlands_verkeersbord_A2-5" width="300" height="300" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" version="1.1" >
+	<g>
+		<circle   id="circle"   fill="#F7FBF5"   stroke="#808080"   stroke-width="0.5"   cx="150"   cy="150"   r="149.8" />
+
+		<text x="105" y="210" font-family="sans-serif" font-size="160" font-weight="bold" fill="#8f9695" >
+			5
+		</text>
+
+		<g
+		   id="stripes">
+			<line   fill="none"   stroke="#2a2d2f"   stroke-width="10"   x1="63"   y1="265"   x2="206"   y2="17"   id="line5" />
+			<line   fill="none"   stroke="#2a2d2f"   stroke-width="10"   x1="77"   y1="276"   x2="221"   y2="24"   id="line7" />
+			<line   fill="none"   stroke="#2a2d2f"   stroke-width="10"   x1="94"   y1="282"   x2="236"   y2="33"   id="line9" />
+		</g>
+		
+		<circle   id="white"   fill="none"   stroke="#F7FBF5"   stroke-width="9"   cx="150"   cy="150"   r="144" />
+	</g>
+</svg>

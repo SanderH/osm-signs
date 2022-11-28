@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" id="Netherlands_traffic_sign_OB2" width="300" height="100" viewBox="0 0 300 100"> 
+ 	<g> <rect id="surface" width="300" height="100" fill="#f7fbf5"> </rect>
+		<rect id="border" x="5" y="5" rx="10" ry="10" width="290" height="90" stroke="gray" stroke-width="3px" fill="none"/>
+		<g id="fiets" transform="scale(0.7) translate(60, -75)">
+			<circle cx="96" cy="168" r="30" stroke="black" stroke-width="8" fill="#f7fbf5"/>
+			<circle cx="206" cy="168" r="30" stroke="black" stroke-width="8" fill="#f7fbf5"/>
+			<path fill="#2a2d2f" d="M 142,98 L 142,90 L 127,90 C 120,90 118,98 118,98 C 114,112 94,166 94,166 C 92,171 100,174 102,169 C 104,164 126,102 126,102 C 127,98 132,98 132,98 L 142,98"/>
+			<polyline points="206,168 182,115 117,115 " style="stroke-linecap:round;fill:none;stroke:black;stroke-width:8"/>
+			<polyline points="206,168 156,168 116,126 " style="stroke-linecap:round;fill:none;stroke:black;stroke-width:8"/>
+			<polyline points="156,168 184,103" style="stroke-linecap:round;fill:none;stroke:black;stroke-width:8"/>
+			<polyline points="168,103 194,103" style="stroke-linecap:round;fill:none;stroke:black;stroke-width:8"/>
+		</g>
+ 	</g>
+</svg>
